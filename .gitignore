@@ -1,0 +1,71 @@
+# -------------------------------
+# 🧠 Python & Virtual Environment
+# -------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.egg-info/
+*.log
+.venv/
+env/
+venv/
+ENV/
+
+# -------------------------------
+# ⚙️ Streamlit & Cache
+# -------------------------------
+.streamlit/
+.streamlit-cache/
+.streamlit-secrets.toml
+.cache/
+persistent_maps/
+assets/*.tif
+assets/*.png
+
+# -------------------------------
+# 🔐 Credentials & Environment
+# -------------------------------
+.env
+*.key
+*.json
+secrets.json
+token.json
+earthengine_credentials/
+
+# -------------------------------
+# 🛰️ Earth Engine & Drone Files
+# -------------------------------
+*.geojson
+*.json
+*.tiff
+*.tif
+*.zip
+
+# -------------------------------
+# 🪞 IDE & System Files
+# -------------------------------
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# -------------------------------
+# 📊 Notebook & Reports
+# -------------------------------
+*.ipynb_checkpoints/
+*.csv
+*.xlsx
+*.docx
+*.pdf
+
+# -------------------------------
+# 📦 Build / Deployment Artifacts
+# -------------------------------
+*.spec
+dist/
+build/
+__pycache__/
