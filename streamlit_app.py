@@ -19,7 +19,13 @@ os.makedirs(ASSETS_DIR, exist_ok=True)
 # -------------------- Custom imports (your modules) --------------------
 # IMPORTANT: These must exist in repo. compute_drone_ndvi may use rasterio locally.
 from ndvi_analysis import run_analysis
-from drone_utils import compute_drone_ndvi, ndvi_stats_from_drone
+try:
+    from drone_utils import compute_drone_ndvi, ndvi_stats_from_drone
+    DRONE_AVAILABLE = True
+except Exception as e:
+    print("⚠️ Drone NDVI disabled (rasterio not available):", e)
+    DRONE_AVAILABLE = False
+
 
 # -------------------- Session state --------------------
 for key, default in {
@@ -173,9 +179,13 @@ with st.sidebar:
     st.header("🚁 Drone Data (optional)")
     include_drone = st.checkbox("Include Drone NDVI Analysis")
     red_band = nir_band = None
-    if include_drone:
+    if include_drone and DRONE_AVAILABLE and red_band and nir_band:
         red_band = st.file_uploader("RED band (GeoTIFF)", type=["tif","tiff"], key="drone_red")
         nir_band = st.file_uploader("NIR band (GeoTIFF)", type=["tif","tiff"], key="drone_nir")
+    # existing drone processing code...
+    elif include_drone and not DRONE_AVAILABLE:
+        st.warning("Drone NDVI feature is unavailable on Streamlit Cloud (rasterio missing). Run locally to use this feature.")
+
 
     st.header("📲 Alerts")
     phone = st.text_input("Recipient phone (e.g. +919876543210)")
