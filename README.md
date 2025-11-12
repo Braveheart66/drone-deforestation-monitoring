@@ -36,6 +36,3 @@ The system visualizes vegetation changes over time and alerts users about defore
 | **Alerts** | Twilio WhatsApp API |
 | **Visualization** | NDVI slider, heatmaps, metrics cards |
 
----
-
-### 🧪 Directory Structure
