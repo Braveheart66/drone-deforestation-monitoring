@@ -1,30 +1,22 @@
-# Core packages
+# --- Core libraries ---
 streamlit==1.38.0
 numpy==1.26.4
+pandas==2.2.3
 matplotlib==3.9.2
-pillow==10.4.0
+Pillow==10.4.0
 requests==2.32.3
 jinja2==3.1.4
 python-dotenv==1.0.1
 
-# Geospatial and Earth Engine
-rasterio==1.3.9
-folium==0.17.0
-geemap==0.32.0
+# --- Geospatial + Earth Engine ---
 earthengine-api==1.4.3
-
-# Streamlit extensions
+geemap==0.32.0
+rasterio==1.3.9
+folium==0.16.0
 streamlit-folium==0.18.0
-streamlit-lottie==0.0.5
 
-# Twilio for WhatsApp alerts
-twilio==9.0.3
-
-# Data handling and visualization
-pandas==2.2.3
-
-# Optional: Image processing and optimization
+# --- Optional AI / Computer Vision ---
 opencv-python-headless==4.10.0.84
 
-# For async / threading operations (used in Twilio async calls)
-aiohttp==3.9.5
+# --- Communication (WhatsApp via Twilio) ---
+twilio==9.0.3
