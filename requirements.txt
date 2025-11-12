@@ -1,4 +1,3 @@
-# ---- Core ----
 streamlit==1.38.0
 numpy==1.26.4
 pandas==2.2.3
@@ -7,14 +6,7 @@ Pillow==10.4.0
 requests==2.32.3
 jinja2==3.1.4
 python-dotenv==1.0.1
-
-# ---- Earth Engine + Mapping ----
 earthengine-api==1.4.3
-geemap==0.32.0
 folium==0.16.0
 streamlit-folium==0.18.0
-geopandas==1.0.1
-rio-cogeo==5.1.3
-
-# ---- Alerts ----
 twilio==9.0.3
